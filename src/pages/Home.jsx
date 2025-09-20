@@ -14,11 +14,11 @@ function Home() {
          navigate(`/repo/${owner}/${repoName}`);
     }
   return (
-    <div>
-        <h1>GitHub Issue Tracker</h1>
+    <div className='font-bold text-center'>
+        <h1 className='font-bold text-center mb-5'>GitHub Issue Tracker</h1>
         <form onSubmit={handleSubmit}>
-            <input type="text" placeholder='owner/repo' value={repo} onChange={(e)=>setRepo(e.target.value)} />
-            <button type='submit'>Search Issue</button>
+            <input className='border-1' type="text" placeholder='owner/repo' value={repo} onChange={(e)=>setRepo(e.target.value)} />
+            <button className='bg-green-300 hover:bg-green-600 ml-2' type='submit'>Search Issue</button>
         </form>
     </div>
   )

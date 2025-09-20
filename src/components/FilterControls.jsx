@@ -2,7 +2,7 @@ import React from 'react'
 
 const FilterControls= ({filters,dispatch})=>{
     return(
-        <div>
+        <div style={{margin:"2px"}}>
             <select 
             value={filters.status}
             onChange={(e)=>dispatch({type:"SET_STATUS", payload: e.target.value})}

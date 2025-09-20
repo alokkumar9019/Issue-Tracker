@@ -43,11 +43,11 @@ const Issues=()=> {
 
     const filteredIssues=issues.filter((issue)=> filters.label? issue.labels.some((l)=> l.name.includes(filters.label)):true);
   return (
-    <div>
-        <h2>Isuues for {owner}/{repo}</h2>
+    <div className='text-center'>
+        <h2 className='font-bold'>Isuues for {owner}/{repo}</h2>
         <FilterControls filters={filters} dispatch={dispatch}/>
         {loading && <p>Loading Issues...</p>}
-        {error && <p>Error</p>}
+        {error && <p style={{color:"red"}}>Error</p>}
 
         {
             filteredIssues.map((issue)=>(
